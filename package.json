@@ -23,10 +23,13 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "pnpm run build",
-    "build": "rimraf dist && tsc -p .",
-    "watch": "pnpm run build -watch",
-    "lint": "eslint \"src/**/*.ts\""
+    "vscode:prepublish": "pnpm run esbuild-base --minify",
+    "esbuild-base": "rimraf dist && esbuild ./src/index.ts --bundle --outfile=dist/index.js --external:vscode --format=cjs --platform=node",
+    "esbuild": "pnpm run esbuild-base --sourcemap",
+    "esbuild:watch": "pnpm run esbuild-base --sourcemap --watch",
+    "lint": "eslint \"src/**/*.ts\"",
+    "vsce:package": "pnpm run vsce package --no-dependencies",
+    "vsce:publish": "pnpm run vsce publish --no-dependencies"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.1",
@@ -34,6 +37,7 @@
     "@types/vscode": "^1.73.0",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
     "@typescript-eslint/parser": "^5.42.0",
+    "esbuild": "^0.17.19",
     "eslint": "^8.26.0",
     "rimraf": "^5.0.1",
     "tsx": "^3.12.7",
