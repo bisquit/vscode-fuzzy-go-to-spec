@@ -32,7 +32,6 @@
     "vsce:publish": "pnpm run vsce publish --no-dependencies"
   },
   "devDependencies": {
-    "@types/mocha": "^10.0.1",
     "@types/node": "^16.11.7",
     "@types/vscode": "^1.73.0",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
