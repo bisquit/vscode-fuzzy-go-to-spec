@@ -28,8 +28,8 @@
     "esbuild": "pnpm run esbuild-base --sourcemap",
     "esbuild:watch": "pnpm run esbuild-base --sourcemap --watch",
     "lint": "eslint \"src/**/*.ts\"",
-    "vsce:package": "pnpm run vsce package --no-dependencies",
-    "vsce:publish": "pnpm run vsce publish --no-dependencies"
+    "vsce:package": "pnpm vsce package --no-dependencies",
+    "vsce:publish": "pnpm vsce publish --no-dependencies"
   },
   "devDependencies": {
     "@types/node": "^16.11.7",
