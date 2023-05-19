@@ -1,6 +1,6 @@
-# VSCode Fuzzy Go to Spec
+![logo](assets/logo.png)
 
-Switch between the source file and the spec.
+Switch between the source file and the spec using fuzzy search.
 
 ## Motivation
 
