@@ -2,7 +2,7 @@
   "name": "vscode-fuzzy-go-to-spec",
   "displayName": "Fuzzy Go to Spec",
   "description": "Switch between source and spec using fuzzy search",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "publisher": "bisquit",
   "icon": "assets/icon.png",
