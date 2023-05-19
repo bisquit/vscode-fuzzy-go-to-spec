@@ -8,7 +8,7 @@ export function activate(context: vscode.ExtensionContext) {
   );
 
   const disposable = vscode.commands.registerCommand(
-    'extension.helloWorld',
+    'extension.goToSpec',
     async () => {
       const activeDocument = vscode.window.activeTextEditor?.document;
       if (!activeDocument) {
