@@ -12,21 +12,21 @@
   "categories": [
     "Other"
   ],
-  "main": "./dist/src/extension.js",
+  "main": "./dist/index.js",
   "contributes": {
     "commands": [
       {
-        "command": "extension.goToSpec",
-        "title": "Go to Spec"
+        "command": "fuzzy-go-to-spec.goToSpec",
+        "title": "Go to Spec",
+        "category": "Fuzzy Go to Spec"
       }
     ]
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "lint": "eslint \"src/**/*.ts\"",
-    "watch": "tsc -watch -p ./",
-    "test": "tsc && node dist/test/runTest.js"
+    "vscode:prepublish": "pnpm run build",
+    "build": "rimraf dist && tsc -p .",
+    "watch": "pnpm run build -watch",
+    "lint": "eslint \"src/**/*.ts\""
   },
   "devDependencies": {
     "@types/mocha": "^10.0.1",
@@ -35,6 +35,7 @@
     "@typescript-eslint/eslint-plugin": "^5.42.0",
     "@typescript-eslint/parser": "^5.42.0",
     "eslint": "^8.26.0",
+    "rimraf": "^5.0.1",
     "tsx": "^3.12.7",
     "typescript": "^5.0.2"
   },
