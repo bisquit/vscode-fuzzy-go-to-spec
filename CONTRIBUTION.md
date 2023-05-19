@@ -8,6 +8,8 @@ pnpm run esbuild:watch
 
 Debug > Run Extension
 
+After modifying, 「Cmd + Shift + P」 > 「Developer: Reload Window」 in extension host window
+
 ## publish
 
 ```sh

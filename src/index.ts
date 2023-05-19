@@ -1,8 +1,8 @@
 import * as vscode from 'vscode';
-import { getSourceFiles } from './utils/get-source-files';
-import { getSpecFiles } from './utils/get-spec-files';
+import { getSourceFiles } from './get-source-files';
+import { getSpecFiles } from './get-spec-files';
 import { isSpec } from './utils/is-spec';
-import { openFile } from './utils/vscode';
+import { openFile } from './vscode-utils';
 
 export function activate(context: vscode.ExtensionContext) {
   console.log('"fuzzy-go-to-spec" is now active.');

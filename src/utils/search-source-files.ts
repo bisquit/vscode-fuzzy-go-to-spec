@@ -1,26 +1,24 @@
 import { search } from 'fast-fuzzy';
 import { extname } from 'node:path';
-import * as vscode from 'vscode';
 import { getFile } from './get-file';
 import { isSpec } from './is-spec';
-import { getWorkspaceFiles } from './vscode';
 
-export async function getSourceFiles(path: string): Promise<vscode.Uri[]> {
-  const { filenameWithoutExt, ext } = getFile(path);
+export function searchSourceFilesFromList(
+  targetPath: string,
+  list: string[]
+): string[] {
+  const { filenameWithoutExt, ext } = getFile(targetPath);
 
-  const candidates = (await getWorkspaceFiles())
-    .map((v) => v.path)
+  const candidates = list
     .filter((v) => !isSpec(v))
     .filter((v) => extname(v) === ext)
     .filter((v) => !includeBlacklist(v));
-  console.log('candidates: ', candidates);
 
   const fuzzyResult = search(filenameWithoutExt, candidates, {
     returnMatchData: true,
   });
-  console.log('fuzzyResult: ', fuzzyResult);
 
-  const result = fuzzyResult.map((v) => v.item).map((v) => vscode.Uri.file(v));
+  const result = fuzzyResult.map((v) => v.item);
   return result;
 }
 

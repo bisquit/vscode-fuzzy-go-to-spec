@@ -28,6 +28,7 @@
     "esbuild": "pnpm run esbuild-base --sourcemap",
     "esbuild:watch": "pnpm run esbuild-base --sourcemap --watch",
     "lint": "eslint \"src/**/*.ts\"",
+    "test": "vitest",
     "vsce:package": "pnpm vsce package --no-dependencies",
     "vsce:publish": "pnpm vsce publish --no-dependencies"
   },
@@ -40,10 +41,12 @@
     "eslint": "^8.26.0",
     "rimraf": "^5.0.1",
     "tsx": "^3.12.7",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.2",
+    "vitest": "^0.31.1"
   },
   "dependencies": {
-    "fast-fuzzy": "^1.12.0"
+    "fast-fuzzy": "^1.12.0",
+    "just-group-by": "^2.2.0"
   },
   "prettier": {
     "editorconfig": true,
