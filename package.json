@@ -6,7 +6,7 @@
   "author": "bisquit",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bisquit/vscode-fuzzy-switch-spec.git"
+    "url": "git+https://github.com/bisquit/vscode-fuzzy-go-to-spec.git"
   },
   "publisher": "bisquit",
   "engines": {
