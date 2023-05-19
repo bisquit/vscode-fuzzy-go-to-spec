@@ -55,5 +55,8 @@
       "@typescript-eslint/explicit-module-boundary-types": 0,
       "@typescript-eslint/no-non-null-assertion": 0
     }
+  },
+  "dependencies": {
+    "fast-fuzzy": "^1.12.0"
   }
 }

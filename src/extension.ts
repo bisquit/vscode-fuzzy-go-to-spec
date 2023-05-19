@@ -1,5 +1,5 @@
-import * as path from 'node:path';
 import * as vscode from 'vscode';
+import { getSourceFiles, getSpecFiles, isSpec } from './utils/path';
 import { openFile } from './utils/vscode';
 
 export function activate(context: vscode.ExtensionContext) {
@@ -15,22 +15,32 @@ export function activate(context: vscode.ExtensionContext) {
         return;
       }
 
-      const filePath = activeDocument.fileName;
+      const activeFilePath = activeDocument.fileName;
 
-      console.log('filePath', filePath);
+      console.log('activeFilePath', activeFilePath);
 
-      const basename = path.basename(filePath);
+      if (isSpec(activeFilePath)) {
+        console.log('find source...');
+        const result = await getSourceFiles(activeFilePath);
 
-      console.log('basename', basename);
+        console.log('result', result);
 
-      const result = await vscode.workspace.findFiles('**/index.ts');
+        const first = result.at(0);
+        if (first) {
+          console.log('open', first);
+          await openFile(first);
+        }
+      } else {
+        console.log('find spec...');
+        const result = await getSpecFiles(activeFilePath);
 
-      console.log('result', result);
+        console.log('result', result);
 
-      const first = result.at(0);
-      if (first) {
-        console.log('open', first);
-        await openFile(first);
+        const first = result.at(0);
+        if (first) {
+          console.log('open', first);
+          await openFile(first);
+        }
       }
     }
   );
