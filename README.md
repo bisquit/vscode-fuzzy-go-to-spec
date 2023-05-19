@@ -1,27 +1,15 @@
-# Hello World Sample
+# VSCode Fuzzy Go to Spec
 
-This is a Hello World example that shows you how to use VS Code API.
+Switch between the source file and the spec.
 
-Guide for this sample: https://code.visualstudio.com/api/get-started/your-first-extension.
+## Motivation
 
-## Demo
+In most cases, spec files are named like `<source>.spec`, but they are not always precisely suffixed.
+You can solve this problem by writing mapping configuration, but it's a little cumbersome and annoying.
 
-![demo](demo.gif)
+This extension tries to find the source and the spec using fuzzy search. It's a bit slower than deterministic search, but can be applied widely with no configuration.
 
-## VS Code API
+## Alternatives
 
-### `vscode` module
-
-- [`commands.registerCommand`](https://code.visualstudio.com/api/references/vscode-api#commands.registerCommand)
-- [`window.showInformationMessage`](https://code.visualstudio.com/api/references/vscode-api#window.showInformationMessage)
-
-### Contribution Points
-
-- [`contributes.commands`](https://code.visualstudio.com/api/references/contribution-points#contributes.commands)
-
-## Running the Sample
-
-- Run `npm install` in terminal to install dependencies
-- Run the `Run Extension` target in the Debug View. This will:
-	- Start a task `npm: watch` to compile the code
-	- Run the extension in a new VS Code window
+- https://github.com/lourenci/go-to-spec
+- https://github.com/sporto/rails-go-to-spec-vscode
