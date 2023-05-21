@@ -13,8 +13,8 @@ After modifying, 「Cmd + Shift + P」 > 「Developer: Reload Window」 in exten
 ## publish
 
 ```sh
-# bump version
-npx bumpp
+pnpm dlx commit-and-tag-version
+git push --follow-tags origin main
 
 pnpm run vsce:package
 pnpm run vsce:publish
