@@ -1,3 +1,4 @@
+import { anyOf, char, createRegExp, oneOrMore } from 'magic-regexp';
 import { getFilenameComponents } from './get-file';
 
 /**
@@ -5,7 +6,10 @@ import { getFilenameComponents } from './get-file';
  */
 export function isSpec(path: string, specPatterns: string[]) {
   const { name } = getFilenameComponents(path);
-  return specPatterns.some((pattern) => {
-    return new RegExp(`${pattern}$`).test(name);
-  });
+  const regex = createRegExp(
+    oneOrMore(char),
+    anyOf(...specPatterns).at.lineEnd()
+  );
+
+  return regex.test(name);
 }
