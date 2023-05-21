@@ -8,3 +8,11 @@ export async function openFile(uri: vscode.Uri) {
 export async function getWorkspaceFiles() {
   return vscode.workspace.findFiles('**/*', 'node_modules');
 }
+
+export function createUriFromPath(path: string) {
+  return vscode.Uri.file(path);
+}
+
+export async function showInfo(msg: string) {
+  await vscode.window.showInformationMessage(msg);
+}

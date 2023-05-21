@@ -1,27 +1,32 @@
-import { search } from 'fast-fuzzy';
-import { extname } from 'node:path';
-import { getFile } from './get-file';
-import { isSpec } from './is-spec';
+import { anyOf, createRegExp } from 'magic-regexp';
+import { getFilenameComponents } from './get-file';
+import { logger } from './logger';
 
-export function searchSourceFilesFromList(
-  targetPath: string,
-  list: string[]
-): string[] {
-  const { filenameWithoutExt, ext } = getFile(targetPath);
+export function searchSourceFilesFromList({
+  targetPath,
+  candidates,
+  specPatterns,
+  allowedExtensions,
+}: {
+  targetPath: string;
+  candidates: string[];
+  specPatterns: string[];
+  allowedExtensions: string[];
+}): string[] {
+  const { name } = getFilenameComponents(targetPath);
 
-  const candidates = list
-    .filter((v) => !isSpec(v))
-    .filter((v) => extname(v) === ext)
-    .filter((v) => !includeBlacklist(v));
+  const nameWithoutSpecPatterns = name.replace(
+    createRegExp(anyOf(...specPatterns)),
+    ''
+  );
 
-  const fuzzyResult = search(filenameWithoutExt, candidates, {
-    returnMatchData: true,
-  });
+  const regex = createRegExp(
+    nameWithoutSpecPatterns,
+    anyOf(...allowedExtensions)
+  );
+  logger.info('regex: ', regex);
 
-  const result = fuzzyResult.map((v) => v.item);
-  return result;
-}
-
-function includeBlacklist(path: string) {
-  return path.includes('d.ts');
+  return candidates.filter((v) =>
+    regex.test(getFilenameComponents(v).filename)
+  );
 }

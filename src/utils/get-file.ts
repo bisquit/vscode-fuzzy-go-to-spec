@@ -1,13 +1,24 @@
 import { basename, extname } from 'node:path';
 
-export function getFile(path: string) {
+/**
+ * Returns filename components from file path
+ */
+export function getFilenameComponents(path: string) {
   const filename = basename(path);
-  const ext = extname(filename);
-  const filenameWithoutExt = filename.replace(ext, '');
+  const extension = extname(filename);
+  const name = filename.replace(extension, '');
 
   return {
     filename,
-    ext,
-    filenameWithoutExt,
+    name: name,
+    extension: extension,
+    /**
+     * @deprecated
+     */
+    ext: extension,
+    /**
+     * @deprecated
+     */
+    filenameWithoutExt: name,
   };
 }

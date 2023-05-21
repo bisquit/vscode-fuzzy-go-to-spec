@@ -1,20 +1,49 @@
 import { expect, test } from 'vitest';
 import { searchSpecFilesFromList } from '../../src/utils/search-spec-files';
 
-type Case = [string, string[], string];
+type Case = {
+  target: string;
+  list: string[];
+  expected: string[];
+};
 
 test.each([
-  ['a/b/c/get.ts', ['a/b/c/get.test.ts'], 'a/b/c/get.test.ts'],
-  [
-    'a/b/c/get.ts',
-    ['a/b/c/get.test.js', 'a/b/c/get.test.d.ts', 'a/b/c/get.test.ts'],
-    'a/b/c/get.test.ts',
-  ],
-  // ['a/b/c/AppBar.vue', ['a/b/c/AppBar.test.ts'], 'a/b/c/AppBar.test.ts'],
+  {
+    target: 'a/b/c/get.ts',
+    list: ['a/b/c/get.test.ts'],
+    expected: ['a/b/c/get.test.ts'],
+  },
+  {
+    target: 'a/b/c/get.ts',
+    list: ['a/b/c/get.test.js', 'a/b/c/get.test.d.ts', 'a/b/c/get.test.ts'],
+    expected: ['a/b/c/get.test.ts'],
+  },
+  {
+    target: 'a/b/c/index.ts',
+    list: ['a/b/c/index.test.ts', 'a/b/d/index.test.ts'],
+    expected: ['a/b/c/index.test.ts', 'a/b/d/index.test.ts'],
+  },
+  // react
+  {
+    target: 'a/b/c/AppBar.tsx',
+    list: ['a/b/c/AppBar.test.ts'],
+    expected: ['a/b/c/AppBar.test.ts'],
+  },
+  /// vue
+  {
+    target: 'a/b/c/AppBar.vue',
+    list: ['a/b/c/AppBar.test.ts'],
+    expected: ['a/b/c/AppBar.test.ts'],
+  },
 ] satisfies Case[])(
   'searchSpecFilesFromList(%s, %j) -> %s',
-  (target, list, expected) => {
-    const result = searchSpecFilesFromList(target, list);
-    expect(result.at(0)).toBe(expected);
+  ({ target, list, expected }) => {
+    const result = searchSpecFilesFromList({
+      targetPath: target,
+      candidates: list,
+      specPatterns: ['.spec', '.test'],
+      allowedExtensions: ['.ts', '.tsx', '.vue'],
+    });
+    expect(result).toEqual(expected);
   }
 );

@@ -2,14 +2,14 @@
 
 # Fuzzy Go to Spec
 
-Switch between the source file and the spec using fuzzy search.
+VSCode extension that switch between the source file and the spec.
+This extension uses fast-fuzzy if related spec cannot be determined.
 
-## Motivation
+## Aim
 
-In most cases, spec files are named like `<source>.spec`, but they are not always precisely suffixed.
-You can solve this problem by writing mapping configuration, but it's a little cumbersome and annoying.
-
-This extension tries to find the source and the spec using fuzzy search. It's a bit slower than deterministic search, but can be applied widely with no configuration.
+1. Enable to toggle even if extension is not the same (e.g. `get.tsx` <=> `get.test.ts`, `AppBar.vue` <=> `AppBar.test.ts`)
+2. Enable to toggle even if spec patterns are unique (e.g. `get.ts` <=> `get.unit.test.ts`)
+3. Enable to toggle even if source file name is not unique (e.g. `index.ts` <=> `index.test.ts`)
 
 ## Usage
 
@@ -19,5 +19,8 @@ This extension tries to find the source and the spec using fuzzy search. It's a 
 
 ## Alternatives
 
-- https://github.com/lourenci/go-to-spec
-- https://github.com/sporto/rails-go-to-spec-vscode
+I have tried some great formers.
+If the extension doesn't match for you, please try these.
+
+- https://marketplace.visualstudio.com/items?itemName=Lourenci.go-to-spec
+- https://marketplace.visualstudio.com/items?itemName=Nautigsam.go-to-test

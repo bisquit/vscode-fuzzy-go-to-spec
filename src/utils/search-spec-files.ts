@@ -1,26 +1,28 @@
-import { search } from 'fast-fuzzy';
-import groupBy from 'just-group-by';
-import { extname } from 'node:path';
-import { getFile } from './get-file';
-import { isSpec } from './is-spec';
+import { anyOf, createRegExp } from 'magic-regexp';
+import { getFilenameComponents } from './get-file';
+import { logger } from './logger';
 
-export function searchSpecFilesFromList(
-  targetPath: string,
-  list: string[]
-): string[] {
-  const { filenameWithoutExt, ext } = getFile(targetPath);
+export function searchSpecFilesFromList({
+  targetPath,
+  candidates,
+  specPatterns,
+  allowedExtensions,
+}: {
+  targetPath: string;
+  candidates: string[];
+  specPatterns: string[];
+  allowedExtensions: string[];
+}): string[] {
+  const { name } = getFilenameComponents(targetPath);
 
-  const candidates = list.filter((v) => isSpec(v));
+  const regex = createRegExp(
+    name,
+    anyOf(...specPatterns),
+    anyOf(...allowedExtensions)
+  );
+  logger.info('regex: ', regex);
 
-  const fuzzyResult = search(filenameWithoutExt, candidates, {
-    returnMatchData: true,
-  });
-
-  const result = fuzzyResult.map((v) => v.item);
-  preferExt(result, ext);
-  return result;
-}
-
-function preferExt(v: string[], ext: string) {
-  const byExt = groupBy(v, (v) => extname(v));
+  return candidates.filter((v) =>
+    regex.test(getFilenameComponents(v).filename)
+  );
 }

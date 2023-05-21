@@ -1,7 +1,7 @@
 {
   "name": "vscode-fuzzy-go-to-spec",
   "displayName": "Fuzzy Go to Spec",
-  "description": "Switch between source and spec using fuzzy search",
+  "description": "Switch between source and spec",
   "version": "0.0.2",
   "license": "MIT",
   "publisher": "bisquit",
@@ -12,7 +12,7 @@
   "categories": [
     "Other"
   ],
-  "main": "./dist/index.js",
+  "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
@@ -20,15 +20,32 @@
         "title": "Go to Spec",
         "category": "Fuzzy Go to Spec"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Fuzzy Go to Spec",
+      "properties": {
+        "fuzzyGoToSpec.specPatterns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            ".spec",
+            ".test"
+          ],
+          "markdownDescription": "List spec patterns"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "pnpm run esbuild-base --minify",
-    "esbuild-base": "rimraf dist && esbuild ./src/index.ts --bundle --outfile=dist/index.js --external:vscode --format=cjs --platform=node",
+    "esbuild-base": "rimraf dist && esbuild ./src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node",
     "esbuild": "pnpm run esbuild-base --sourcemap",
     "esbuild:watch": "pnpm run esbuild-base --sourcemap --watch",
     "lint": "eslint \"src/**/*.ts\"",
     "test": "vitest",
+    "test:ci": "vitest run",
     "vsce:package": "pnpm vsce package --no-dependencies",
     "vsce:publish": "pnpm vsce publish --no-dependencies"
   },
@@ -46,7 +63,8 @@
   },
   "dependencies": {
     "fast-fuzzy": "^1.12.0",
-    "just-group-by": "^2.2.0"
+    "loglevel": "^1.8.1",
+    "magic-regexp": "^0.7.0"
   },
   "prettier": {
     "editorconfig": true,
