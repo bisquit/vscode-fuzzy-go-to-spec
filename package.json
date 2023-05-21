@@ -21,6 +21,14 @@
         "category": "Fuzzy Go to Spec"
       }
     ],
+    "keybindings": [
+      {
+        "command": "fuzzy-go-to-spec.goToSpec",
+        "key": "ctrl+shift+t",
+        "mac": "cmd+shift+t",
+        "when": "editorTextFocus"
+      }
+    ],
     "configuration": {
       "title": "Fuzzy Go to Spec",
       "properties": {
