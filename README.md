@@ -14,9 +14,9 @@ This extension uses fast-fuzzy if related spec cannot be determined.
 
 ## Commands
 
-| commands                       | description                         | Shortcut |
-| ------------------------------ | ----------------------------------- | -------- |
-| `Fuzzy Go to Spec: Go to Spec` | Switch between the source and spec. |          |
+| commands                       | description                         | Shortcut          |
+| ------------------------------ | ----------------------------------- | ----------------- |
+| `Fuzzy Go to Spec: Go to Spec` | Switch between the source and spec. | `Cmd + Shift + t` |
 
 ## Configurations
 
