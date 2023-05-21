@@ -1,15 +1,15 @@
 ![logo](./assets/header.png)
 
-# Fuzzy Go to Spec
+# vscode-fuzzy-go-to-spec
 
-VSCode extension that switch between the source file and the spec.
+Switch between the source file and the spec.
 
 This extension uses fast-fuzzy if related spec cannot be determined.
 
 ## Aim
 
 1. Enable to toggle even if extension is not the same (e.g. `toast.tsx` <=> `toast.test.ts`, `Button.vue` <=> `Button.test.ts`)
-2. Enable to toggle even if spec patterns are unique (e.g. `toast.ts` <=> `toast.unit.test.ts`)
+2. Enable to toggle even if spec patterns are specific (e.g. `toast.ts` <=> `toast.unit.test.ts`)
 3. Enable to toggle even if source file name is not unique (e.g. `index.ts` <=> `index.test.ts`)
 
 ## Commands
