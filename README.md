@@ -6,6 +6,8 @@ Switch between the source file and the spec.
 
 This extension uses fast-fuzzy if related spec cannot be determined.
 
+![demo](./assets/demo.gif)
+
 ## Aim
 
 1. Enable to toggle even if extension is not the same (e.g. `toast.tsx` <=> `toast.test.ts`, `Button.vue` <=> `Button.test.ts`)
