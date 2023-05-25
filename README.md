@@ -4,15 +4,9 @@
 
 Switch between the source file and the spec.
 
-This extension uses fast-fuzzy if related spec cannot be determined.
+(Why I created this extension? See Comparison at the bottom of the README.)
 
 ![demo](./assets/demo.gif)
-
-## Aim
-
-1. Enable to toggle even if extension is not the same (e.g. `toast.tsx` <=> `toast.test.ts`, `Button.vue` <=> `Button.test.ts`)
-2. Enable to toggle even if spec patterns are specific (e.g. `toast.ts` <=> `toast.unit.test.ts`)
-3. Enable to toggle even if source file name is not unique (e.g. `index.ts` <=> `index.test.ts`)
 
 ## Commands
 
@@ -26,10 +20,18 @@ This extension uses fast-fuzzy if related spec cannot be determined.
 | ---------------------------- | ------------------- | ------------------ |
 | `fuzzyGoToSpec.specPatterns` | List spec patterns. | ['.spec', '.test'] |
 
-## Alternatives
+## Comparison to Other switchers
 
-I have tried some great formers.
-If the extension doesn't match for you, please try these.
+There are some great formers, but almost all has problems.
 
-- https://marketplace.visualstudio.com/items?itemName=Lourenci.go-to-spec
-- https://marketplace.visualstudio.com/items?itemName=Nautigsam.go-to-test
+1. Cannot switch between the soruce and spec when their extensions are not the same
+2. Cannot switch properly if custom patterns are configured
+3. Cannot determine proper spec if file names are duplicated
+
+So I created the same extension from scratch, and aim for...
+
+1. Enable to toggle even if extension is not the same (e.g. `toast.tsx` <=> `toast.test.ts`, `Button.vue` <=> `Button.test.ts`)
+2. Enable to toggle even if spec patterns are specific (e.g. `toast.ts` <=> `toast.unit.test.ts`)
+3. Enable to toggle even if source file name is not unique (e.g. `index.ts` <=> `index.test.ts`)
+
+This extension uses smart regexp patterns to accomplish 1 and 2, and uses [fast-fuzzy](https://github.com/EthanRutherford/fast-fuzzy) to accomplish 3.
