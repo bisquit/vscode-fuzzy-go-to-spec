@@ -12,6 +12,12 @@
   "categories": [
     "Other"
   ],
+  "keywords": [
+    "test",
+    "spec",
+    "switch",
+    "switcher"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
