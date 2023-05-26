@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.8](https://github.com/bisquit/vscode-fuzzy-go-to-spec/compare/v0.0.7...v0.0.8) (2023-05-26)
+
+
+### Features
+
+* Add new application icon ([#16](https://github.com/bisquit/vscode-fuzzy-go-to-spec/issues/16)) ([4571e04](https://github.com/bisquit/vscode-fuzzy-go-to-spec/commit/4571e041a1539036d129b567f14c6152869ea819))
+
 ## [0.0.7](https://github.com/bisquit/vscode-fuzzy-go-to-spec/compare/v0.0.6...v0.0.7) (2023-05-25)
 
 ## [0.0.6](https://github.com/bisquit/vscode-fuzzy-go-to-spec/compare/v0.0.5...v0.0.6) (2023-05-24)
