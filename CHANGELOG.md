@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.9](https://github.com/bisquit/vscode-fuzzy-go-to-spec/compare/v0.0.8...v0.0.9) (2023-05-26)
+
 ## [0.0.8](https://github.com/bisquit/vscode-fuzzy-go-to-spec/compare/v0.0.7...v0.0.8) (2023-05-26)
 
 
