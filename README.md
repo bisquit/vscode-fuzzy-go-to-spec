@@ -1,5 +1,3 @@
-![logo](./assets/header.png)
-
 # vscode-fuzzy-go-to-spec
 
 Switch between the source file and the spec.
