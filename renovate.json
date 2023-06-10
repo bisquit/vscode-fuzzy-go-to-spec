@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base", ":timezone(Asia/Tokyo)"],
+  "enabledManagers": ["npm"],
+  "schedule": ["after 10:00 and before 22:00"],
+  "prConcurrentLimit": 5,
+  "stabilityDays": 3,
+  "platformAutomerge": true,
+  "patch": {
+    "automerge": true
+  }
+}
