@@ -6,6 +6,7 @@
   "prConcurrentLimit": 5,
   "stabilityDays": 3,
   "platformAutomerge": true,
+  "separateMinorPatch": true,
   "patch": {
     "automerge": true
   }
