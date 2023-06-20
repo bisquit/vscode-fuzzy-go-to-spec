@@ -14,6 +14,11 @@ test.each([
     expected: ['a/b/c/get.ts'],
   },
   {
+    target: 'a/b/c/get_test.ts',
+    list: ['a/b/c/get.ts'],
+    expected: ['a/b/c/get.ts'],
+  },
+  {
     target: 'a/b/c/index.test.ts',
     list: ['d/e/f/index.ts'],
     expected: ['d/e/f/index.ts'],
@@ -36,7 +41,7 @@ test.each([
     const result = searchSourceFilesFromList({
       targetPath: target,
       candidates: list,
-      specPatterns: ['.spec', '.test'],
+      specPatterns: ['.spec', '.test', '_test'],
       allowedExtensions: ['.ts', '.tsx', '.vue'],
     });
     expect(result).toEqual(expected);
