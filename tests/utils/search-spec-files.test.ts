@@ -15,6 +15,11 @@ test.each([
   },
   {
     target: 'a/b/c/get.ts',
+    list: ['a/b/c/get_test.ts'],
+    expected: ['a/b/c/get_test.ts'],
+  },
+  {
+    target: 'a/b/c/get.ts',
     list: ['a/b/c/get.test.js', 'a/b/c/get.test.d.ts', 'a/b/c/get.test.ts'],
     expected: ['a/b/c/get.test.ts'],
   },
@@ -41,7 +46,7 @@ test.each([
     const result = searchSpecFilesFromList({
       targetPath: target,
       candidates: list,
-      specPatterns: ['.spec', '.test'],
+      specPatterns: ['.spec', '.test', '_test'],
       allowedExtensions: ['.ts', '.tsx', '.vue'],
     });
     expect(result).toEqual(expected);

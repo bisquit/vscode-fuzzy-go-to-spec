@@ -45,7 +45,8 @@
           },
           "default": [
             ".spec",
-            ".test"
+            ".test",
+            "_test"
           ],
           "markdownDescription": "List spec patterns"
         }

@@ -14,9 +14,9 @@ Switch between the source file and the spec.
 
 ## Configurations
 
-| configuration                | description         | Default            |
-| ---------------------------- | ------------------- | ------------------ |
-| `fuzzyGoToSpec.specPatterns` | List spec patterns. | ['.spec', '.test'] |
+| configuration                | description         | Default                     |
+| ---------------------------- | ------------------- | --------------------------- |
+| `fuzzyGoToSpec.specPatterns` | List spec patterns. | ['.spec', '.test', '_test'] |
 
 ## Comparison to Other switchers
 
