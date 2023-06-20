@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.11](https://github.com/bisquit/vscode-fuzzy-go-to-spec/compare/v0.0.10...v0.0.11) (2023-06-20)
+
+
+### Features
+
+* Add '_test' pattern for spec files ([#34](https://github.com/bisquit/vscode-fuzzy-go-to-spec/issues/34)) ([832d6ff](https://github.com/bisquit/vscode-fuzzy-go-to-spec/commit/832d6ff02d04d48ad00950124d87c22ea3792847))
+
 ## [0.0.10](https://github.com/bisquit/vscode-fuzzy-go-to-spec/compare/v0.0.9...v0.0.10) (2023-06-12)
 
 ## [0.0.9](https://github.com/bisquit/vscode-fuzzy-go-to-spec/compare/v0.0.8...v0.0.9) (2023-05-26)
