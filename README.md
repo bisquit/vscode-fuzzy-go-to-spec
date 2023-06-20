@@ -1,5 +1,7 @@
 # vscode-fuzzy-go-to-spec
 
+[![Known Vulnerabilities](https://snyk.io/test/github/bisquit/vscode-fuzzy-go-to-spec/badge.svg)](https://snyk.io/test/github/bisquit/vscode-fuzzy-go-to-spec)
+
 Switch between the source file and the spec.
 
 (Why I created this extension? See Comparison at the bottom of the README.)
