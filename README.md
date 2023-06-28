@@ -24,7 +24,7 @@ Switch between the source file and the spec.
 
 There are some great formers, but almost all has problems.
 
-1. Cannot switch between the soruce and spec when their extensions are not the same
+1. Cannot switch between the source and spec when their extensions are not the same
 2. Cannot switch properly if custom patterns are configured
 3. Cannot determine proper spec if file names are duplicated
 
