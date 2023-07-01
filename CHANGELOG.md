@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/bisquit/vscode-fuzzy-go-to-spec/compare/v0.1.1...v0.1.2) (2023-07-01)
+
+
+### Bug Fixes
+
+* changelog ([715b963](https://github.com/bisquit/vscode-fuzzy-go-to-spec/commit/715b963835d7e5f44b5bf638de13c65ccf838b9d))
+
 ## [0.1.1](https://github.com/bisquit/vscode-fuzzy-go-to-spec/compare/v0.1.0...v0.1.1) (2023-07-01)
 
 ### Bug Fixes
