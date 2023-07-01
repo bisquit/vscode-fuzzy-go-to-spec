@@ -26,31 +26,22 @@ jobs:
     needs: release-please
     if: ${{ needs.release-please.outputs.release-created }}
     steps:
-      - name: echo
-        run: echo 'release created'
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
 
-      # - uses: actions/checkout@v3
-      #   if: ${{ steps.release.outputs.release_created }}
-      # - uses: pnpm/action-setup@v2
-      #   with:
-      #     version: 8
-      #   if: ${{ steps.release.outputs.release_created }}
-      # - uses: actions/setup-node@v3
-      #   with:
-      #     node-version-file: '.nvmrc'
-      #     cache: 'pnpm'
-      #   if: ${{ steps.release.outputs.release_created }}
+      - name: install
+        run: pnpm i
 
-      # - name: install
-      #   run: pnpm i
-      #   if: ${{ steps.release.outputs.release_created }}
+      - name: install vsce
+        run: pnpm add -g @vscode/vsce
 
-      # - name: install vsce
-      #   run: pnpm add -g @vscode/vsce
-      #   if: ${{ steps.release.outputs.release_created }}
-
-      # - name: publish
-      #   run: |
-      #     pnpm run vsce:package
-      #     pnpm run vsce:publish
-      #   if: ${{ steps.release.outputs.release_created }}
+      - name: publish
+        run: |
+          pnpm run vsce:package
+          pnpm run vsce:publish
