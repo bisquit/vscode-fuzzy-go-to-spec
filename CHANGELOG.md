@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.0](https://github.com/bisquit/vscode-fuzzy-go-to-spec/compare/v0.0.11...v0.1.0) (2023-07-01)
+
+
+### Features
+
+* Add release-please workflow ([e86b86c](https://github.com/bisquit/vscode-fuzzy-go-to-spec/commit/e86b86cfa2ba829d66bf3f14aa51d913d7052a60))
+
 ## [0.0.11](https://github.com/bisquit/vscode-fuzzy-go-to-spec/compare/v0.0.10...v0.0.11) (2023-06-20)
 
 
