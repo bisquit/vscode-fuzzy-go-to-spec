@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.1](https://github.com/bisquit/vscode-fuzzy-go-to-spec/compare/v0.1.0...v0.1.1) (2023-07-01)
+
+
+### Bug Fixes
+
+* change to node version file ([10da523](https://github.com/bisquit/vscode-fuzzy-go-to-spec/commit/10da523cf4c04540a03724a4e5325b9438154901))
+
 ## [0.1.0](https://github.com/bisquit/vscode-fuzzy-go-to-spec/compare/v0.0.11...v0.1.0) (2023-07-01)
 
 
