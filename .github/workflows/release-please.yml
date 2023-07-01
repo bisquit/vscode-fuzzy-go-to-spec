@@ -18,14 +18,16 @@ jobs:
         with:
           release-type: node
           package-name: release-please-action
+    outputs:
+      release-created: ${{ steps.release.outputs.release_created }}
 
   publish:
     runs-on: ubuntu-latest
     needs: release-please
-    if: ${{ release-please.steps.release.outputs.release_created }}
+    if: ${{ needs.release-please.outputs.release-created }}
     steps:
       - name: echo
-        run: echo 'steps run'
+        run: echo 'release created'
 
       # - uses: actions/checkout@v3
       #   if: ${{ steps.release.outputs.release_created }}
