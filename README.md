@@ -20,6 +20,14 @@ Switch between the source file and the spec.
 | ---------------------------- | ------------------- | --------------------------- |
 | `fuzzyGoToSpec.specPatterns` | List spec patterns. | ['.spec', '.test', '_test'] |
 
+### Add spec patterns
+
+Open extension settings, and add your spec patterns to `Fuzzy Go To Spec: SpecPatterns`.
+
+For example, your specs are named like `someFunction.unit.test.ts`, then add `'.unit.test'` to the list.
+
+After modified, `Cmd + Shift + P` -> 「Developer: Reload Window」
+
 ## Comparison to Other switchers
 
 There are some great formers, but almost all has problems.
