@@ -1,5 +1,28 @@
 # Changelog
 
+## [0.1.5](https://github.com/bisquit/vscode-fuzzy-go-to-spec/compare/v0.1.4...v0.1.5) (2023-09-10)
+
+
+### Documentation
+
+* add specs example ([309e6e1](https://github.com/bisquit/vscode-fuzzy-go-to-spec/commit/309e6e128b5c3225f3c0862d6c8dac162beaacc6))
+
+
+### Others
+
+* **deps:** update all non-major dependencies to ^6.5.0 ([#97](https://github.com/bisquit/vscode-fuzzy-go-to-spec/issues/97)) ([0f8fbe2](https://github.com/bisquit/vscode-fuzzy-go-to-spec/commit/0f8fbe2febc6b5bdd94aa48591f8e4fdf7ec02e2))
+* **deps:** update all non-major dependencies to ^6.6.0 ([#101](https://github.com/bisquit/vscode-fuzzy-go-to-spec/issues/101)) ([83b34a1](https://github.com/bisquit/vscode-fuzzy-go-to-spec/commit/83b34a1eaa5aaa2804ca1f7a15e017554bc8fb35))
+* **deps:** update dependency @types/node to ^18.17.11 ([#93](https://github.com/bisquit/vscode-fuzzy-go-to-spec/issues/93)) ([9ff5f34](https://github.com/bisquit/vscode-fuzzy-go-to-spec/commit/9ff5f34ff099ad0bdb105cb54b4a79c2786ba581))
+* **deps:** update dependency @types/node to ^18.17.12 ([#96](https://github.com/bisquit/vscode-fuzzy-go-to-spec/issues/96)) ([ec1a246](https://github.com/bisquit/vscode-fuzzy-go-to-spec/commit/ec1a2466ad3f472e0ecb0947f8fa30b104bbb595))
+* **deps:** update dependency @types/node to ^18.17.13 ([#99](https://github.com/bisquit/vscode-fuzzy-go-to-spec/issues/99)) ([b07fffc](https://github.com/bisquit/vscode-fuzzy-go-to-spec/commit/b07fffc3b679c57984bef70e76a177953a661f40))
+* **deps:** update dependency @types/node to ^18.17.14 ([#100](https://github.com/bisquit/vscode-fuzzy-go-to-spec/issues/100)) ([47138e7](https://github.com/bisquit/vscode-fuzzy-go-to-spec/commit/47138e77e8dada3c0afc0c750ecbe23d1ed56528))
+* **deps:** update dependency @types/node to ^18.17.8 ([#89](https://github.com/bisquit/vscode-fuzzy-go-to-spec/issues/89)) ([fb19a24](https://github.com/bisquit/vscode-fuzzy-go-to-spec/commit/fb19a24a04b76af669e1cdc74c69853a3cfe04dd))
+* **deps:** update dependency @types/node to ^18.17.9 ([#91](https://github.com/bisquit/vscode-fuzzy-go-to-spec/issues/91)) ([e914dbd](https://github.com/bisquit/vscode-fuzzy-go-to-spec/commit/e914dbdfea9711921fad9dae4030f23ff413f010))
+* **deps:** update dependency eslint to ^8.48.0 ([#95](https://github.com/bisquit/vscode-fuzzy-go-to-spec/issues/95)) ([51c8b9d](https://github.com/bisquit/vscode-fuzzy-go-to-spec/commit/51c8b9d5e4ec1efe2cdc78237e115ba6317efe93))
+* **deps:** update dependency tsx to ^3.12.8 ([#98](https://github.com/bisquit/vscode-fuzzy-go-to-spec/issues/98)) ([2db5ab7](https://github.com/bisquit/vscode-fuzzy-go-to-spec/commit/2db5ab706f1eb34f24fb5fb8463a45b7d4a1831b))
+* **deps:** update dependency typescript to ^5.2.2 ([#92](https://github.com/bisquit/vscode-fuzzy-go-to-spec/issues/92)) ([da697fd](https://github.com/bisquit/vscode-fuzzy-go-to-spec/commit/da697fd1cdf551e61f279e0d886f6517e88a24c8))
+* **deps:** update dependency vitest to ^0.34.3 ([#94](https://github.com/bisquit/vscode-fuzzy-go-to-spec/issues/94)) ([7c8cd79](https://github.com/bisquit/vscode-fuzzy-go-to-spec/commit/7c8cd7958ad1d7e1269bdbf48ed9641576cbec80))
+
 ## [0.1.4](https://github.com/bisquit/vscode-fuzzy-go-to-spec/compare/v0.1.3...v0.1.4) (2023-08-25)
 
 
