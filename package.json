@@ -65,11 +65,11 @@
     "vsce:publish": "pnpm vsce publish --no-dependencies"
   },
   "devDependencies": {
-    "@types/node": "^18.18.10",
+    "@types/node": "^18.18.11",
     "@types/vscode": "1.80.0",
     "@typescript-eslint/eslint-plugin": "^6.12.0",
     "@typescript-eslint/parser": "^6.12.0",
-    "esbuild": "^0.19.6",
+    "esbuild": "^0.19.7",
     "eslint": "^8.54.0",
     "rimraf": "^5.0.5",
     "tsx": "^3.14.0",
