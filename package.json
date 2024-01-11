@@ -67,8 +67,8 @@
   "devDependencies": {
     "@types/node": "^18.19.5",
     "@types/vscode": "1.80.0",
-    "@typescript-eslint/eslint-plugin": "^6.18.0",
-    "@typescript-eslint/parser": "^6.18.0",
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
     "esbuild": "^0.19.11",
     "eslint": "^8.56.0",
     "rimraf": "^5.0.5",
