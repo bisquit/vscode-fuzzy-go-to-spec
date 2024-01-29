@@ -65,7 +65,7 @@
     "vsce:publish": "pnpm vsce publish --no-dependencies"
   },
   "devDependencies": {
-    "@types/node": "^18.19.9",
+    "@types/node": "^18.19.10",
     "@types/vscode": "1.80.0",
     "@typescript-eslint/eslint-plugin": "^6.19.1",
     "@typescript-eslint/parser": "^6.19.1",
@@ -78,7 +78,7 @@
   },
   "dependencies": {
     "fast-fuzzy": "^1.12.0",
-    "loglevel": "^1.8.1",
+    "loglevel": "^1.9.1",
     "magic-regexp": "^0.7.0"
   },
   "prettier": {
