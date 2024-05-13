@@ -71,7 +71,7 @@
     "@typescript-eslint/parser": "^6.21.0",
     "esbuild": "^0.21.1",
     "eslint": "^8.57.0",
-    "rimraf": "^5.0.5",
+    "rimraf": "^5.0.6",
     "tsx": "^3.14.0",
     "typescript": "^5.4.5",
     "vitest": "^0.34.6"
