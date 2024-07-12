@@ -35,7 +35,7 @@ devDependencies:
     specifier: ^8.57.0
     version: 8.57.0
   rimraf:
-    specifier: ^5.0.8
+    specifier: ^5.0.9
     version: 5.0.9
   tsx:
     specifier: ^3.14.0
