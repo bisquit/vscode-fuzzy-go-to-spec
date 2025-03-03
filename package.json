@@ -65,7 +65,7 @@
     "vsce:publish": "pnpm vsce publish --no-dependencies"
   },
   "devDependencies": {
-    "@types/node": "^18.19.76",
+    "@types/node": "^18.19.78",
     "@types/vscode": "1.80.0",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
@@ -73,7 +73,7 @@
     "eslint": "^8.57.1",
     "rimraf": "^5.0.10",
     "tsx": "^3.14.0",
-    "typescript": "^5.7.3",
+    "typescript": "^5.8.2",
     "vitest": "^0.34.6"
   },
   "dependencies": {
