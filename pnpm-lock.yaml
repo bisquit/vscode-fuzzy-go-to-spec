@@ -17,7 +17,7 @@ dependencies:
 
 devDependencies:
   '@types/node':
-    specifier: ^18.19.78
+    specifier: ^18.19.79
     version: 18.19.79
   '@types/vscode':
     specifier: 1.80.0
