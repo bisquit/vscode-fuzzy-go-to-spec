@@ -74,7 +74,7 @@
     "rimraf": "^5.0.10",
     "tsx": "^3.14.0",
     "typescript": "^5.9.3",
-    "vitest": "^0.34.6"
+    "vitest": "^4.0.18"
   },
   "dependencies": {
     "fast-fuzzy": "^1.12.0",
